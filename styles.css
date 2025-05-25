@@ -730,6 +730,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
+    padding: 0 1rem;
 }
 
 .contact-info {
@@ -737,6 +738,7 @@ body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
 
 .contact-banner {
@@ -768,15 +770,18 @@ body {
     font-size: 1.5rem;
     color: var(--primary-color);
     margin-top: 0.5rem;
+    min-width: 30px;
 }
 
 .contact-item h4 {
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
 
 .contact-item p {
     color: #666;
+    font-size: 0.95rem;
 }
 
 #contact-form {
@@ -784,23 +789,24 @@ body {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
 
 .form-group {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
     width: 100%;
-    padding: 1rem;
+    padding: 0.8rem 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     background: var(--white);
     transition: var(--transition);
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .form-group select {
@@ -1266,5 +1272,80 @@ footer {
 
     .testimonial-controls {
         gap: 1rem;
+    }
+}
+
+/* Responsive styles for contact section */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+
+    #contact-form {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-banner {
+        height: 250px;
+    }
+    
+    .contact-details {
+        padding: 1.5rem;
+    }
+    
+    #contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contact-item i {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-banner {
+        height: 200px;
+    }
+    
+    .contact-details {
+        padding: 1rem;
+    }
+    
+    #contact-form {
+        padding: 1rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contact-item i {
+        margin-top: 0;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
     }
 } 
